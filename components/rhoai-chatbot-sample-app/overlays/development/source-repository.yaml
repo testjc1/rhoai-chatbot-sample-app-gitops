@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: rhoai-chatbot-sample-app-repository
+spec:
+  url: https://github.com/testjc1/rhoai-chatbot-sample-app

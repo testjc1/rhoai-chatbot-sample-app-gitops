@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rhoai-chatbot-sample-app-gitops
+  description: This is GitOps manifest for rhoai-chatbot-sample-app   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: rhoai-chatbot-sample-app
+    janus-idp.io/tekton: rhoai-chatbot-sample-app 
+    backstage.io/kubernetes-id: rhoai-chatbot-sample-app 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:rhoai-chatbot-sample-app

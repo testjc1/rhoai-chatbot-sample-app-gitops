@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels: 
+    app.kubernetes.io/instance: rhoai-chatbot-sample-app
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: rhoai-chatbot-sample-app 
+  name: rhoai-chatbot-sample-app
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Gi
